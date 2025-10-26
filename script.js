@@ -69,14 +69,9 @@ likebuttons.forEach((btn) => {
     btn.addEventListener("click",
         function (e) {
 
-        if (e.target.src.indexOf("blackheart") > 0) {
-            
-            e.target.src = "./Red_Heart.png";
-        }
+        const isBlackHeart = e.target.src.toLowerCase().includes("black_heart")
 
-        else {
-            e.target.src = "./Black_Heart.png";
-        }
+        e.target.src = isBlackHeart ? "./Red_Heart.png" : "./Black_Heart.png"
 
     })
 })
